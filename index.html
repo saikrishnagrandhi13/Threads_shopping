@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threads</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- Header Navigation -->
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html"><span class="logo-accent">Threads</span></a>
+                </div>
+
+                <!-- Hidden checkbox for menu toggle -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+                <!-- Hamburger icon -->
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Navigation Menu -->
+                <nav>
+                    <ul>
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Rotating Banner Section -->
+            <section class="banner-container" id="home">
+                <div class="banner-slides">
+                    <div class="banner-slide">
+                        <div class="banner-content">
+                            <h2>New Collection</h2>
+                            <p>Discover the latest in contemporary fashion</p>
+                            <a href="#" class="banner-cta">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="banner-slide">
+                        <div class="banner-content">
+                            <h2>Summer Essentials</h2>
+                            <p>Perfect pieces for the warm season</p>
+                            <a href="#" class="banner-cta">Explore</a>
+                        </div>
+                    </div>
+                    <div class="banner-slide">
+                        <div class="banner-content">
+                            <h2>Timeless Style</h2>
+                            <p>Classic designs reimagined for today</p>
+                            <a href="#" class="banner-cta">Discover</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Arrivals Section -->
+            <section class="new-arrivals" id="new">
+                <div class="section-header">
+                    <h2 class="section-title">New Arrivals</h2>
+                    <p class="section-subtitle">Fresh styles just landed</p>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image padded">
+                            <img src="images/relaxed_shirt.png" alt="Relaxed Shirt">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Relaxed Shirt</h3>
+                            <p class="product-price">$159</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image padded">
+                            <img src="images/relaxed_tshirt.png" alt="Relaxed T-shirt">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Relaxed T-shirt</h3>
+                            <p class="product-price">$69</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image padded">
+                            <img src="images/trousers.png" alt="Tailored Trousers">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Trousers</h3>
+                            <p class="product-price">$229</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image padded">
+                            <img src="images/trousers_linen.webp" alt="Linen Pants">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Linen Pants</h3>
+                            <p class="product-price">$129</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Menswear & Womenswear Section -->
+            <section class="category-section">
+                <div class="category-container">
+                    <div class="category-card womenswear-card" id="women">
+                        <div class="category-image">
+                            <img src="images/womens_wear.webp" alt="Womenswear Collection">
+                        </div>
+                        <div class="category-overlay">
+                            <h2 class="category-title">Womenswear</h2>
+                            <a href="women.html" class="category-link">Shop Women</a>
+                        </div>
+                    </div>
+
+                    <div class="category-card menswear-card" id="men">
+                        <div class="category-image">
+                            <img src="images/menswear.webp" alt="Menswear Collection">
+                        </div>
+                        <div class="category-overlay">
+                            <h2 class="category-title">Menswear</h2>
+                            <a href="men.html" class="category-link">Shop Men</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter">
+                <h2>Stay Updated</h2>
+                <p>Be the first to know about new arrivals and exclusive offers</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <input type="checkbox" id="assistance-toggle" class="footer-toggle">
+                        <label for="assistance-toggle">
+                            <h3>Assistance</h3>
+                        </label>
+                        <ul>
+                            <li><a href="#">Size Guide</a></li>
+                            <li><a href="#">Shipping & Returns</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <input type="checkbox" id="company-toggle" class="footer-toggle">
+                        <label for="company-toggle">
+                            <h3>Company</h3>
+                        </label>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Store Locations</a></li>
+                            <li><a href="#">Privacy Policy </a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <input type="checkbox" id="payment-toggle" class="footer-toggle">
+                        <label for="payment-toggle">
+                            <h3>Payment Methods</h3>
+                        </label>
+                        <p class="footer-label">Secure payments via</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-paypal"></i>
+                        </div>
+                        <p class="footer-label">Express checkout available</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <input type="checkbox" id="connect-toggle" class="footer-toggle">
+                        <label for="connect-toggle">
+                            <h3>Stay Connected</h3>
+                        </label>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Threads. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
