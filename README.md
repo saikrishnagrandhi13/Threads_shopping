@@ -11,9 +11,9 @@ This project demonstrates a modern layout built using HTML and CSS, easily exten
 💡 Ready for future integration (API, backend, or JS logic)\
 
 🧰 Tech Stack
-Category	        Technology
-Frontend	        HTML5, CSS3
-Optional Extensions	JavaScript (for future features)
+Category	            Technology
+Frontend	            HTML5, CSS3
+Optional Extensions  	JavaScript (for future features)
 Tools	                Git, VS Code, Browser DevTools
 
 🚀 Getting Started
