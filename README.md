@@ -22,45 +22,45 @@ Clone the Repository <br>
 git clone https://github.com/saikrishnagrandhi13/Threads_shopping.git <br>
 cd Threads_shopping
 
-Run Locally
-Open index.html directly in your browser,
+Run Locally <br>
+Open index.html directly in your browser, <br>
 or start a local server for development:
 
-Using Python
-bash
-python3 -m http.server 8000
+Using Python <br>
+bash <br>
+python3 -m http.server 8000 <br>
 
-Using Node.js
-bash
+Using Node.js <br>
+bash <br>
 npx http-server .
 
 Then visit 👉 http://localhost:8000
 
-🗂️ Project Structure
+🗂️ Project Structure <br>
 Threads_shopping/
-├── index.html          # Main homepage
-├── about.html          # About page
-├── contact.html        # Contact page
-├── styles.css          # Global CSS styles
-├── images/             # Image assets
-└── README.md           # This file
+├── index.html          # Main homepage <br>
+├── about.html          # About page <br>
+├── contact.html        # Contact page <br>
+├── styles.css          # Global CSS styles <br>
+├── images/             # Image assets <br>
+└── README.md           # This file <br>
 
-🧩 Future Enhancements
-🛒 Shopping cart functionality
-🔍 Search & filter products
-🧠 API or backend integration
-🌈 Dark mode toggle
+🧩 Future Enhancements <br>
+🛒 Shopping cart functionality <br>
+🔍 Search & filter products <br>
+🧠 API or backend integration <br>
+🌈 Dark mode toggle <br>
 🧾 Authentication (login/signup flow)
 
-🤝 Contributing
-Contributions are always welcome!
-1. Fork the repository
-2. Create your feature branch
-    git checkout -b feature/YourFeature
-3. Commit your changes
-    git commit -m "Add your feature"
-4. Push and open a Pull Request
-
-👨‍💻 Author
-Sai Krishna Grandhi
+🤝 Contributing <br>
+Contributions are always welcome! <br>
+1. Fork the repository <br>
+2. Create your feature branch <br>
+    git checkout -b feature/YourFeature <br>
+3. Commit your changes <br>
+    git commit -m "Add your feature" <br>
+4. Push and open a Pull Request <br>
+ 
+👨‍💻 Author <br>
+Sai Krishna Grandhi <br>
 http://linkedin.com/in/sai-krishna-grandhi
