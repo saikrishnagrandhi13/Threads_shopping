@@ -1,25 +1,25 @@
 🧵 Threads Shopping
 
-A clean, front-end shopping interface inspired by Threads — blending elegant design, simplicity, and responsiveness.
+A clean, front-end shopping interface inspired by Threads — blending elegant design, simplicity, and responsiveness. <br>
 This project demonstrates a modern layout built using HTML and CSS, easily extendable with JavaScript or a backend framework later.
 
-🌟 Features
-🛍️ Modern shopping interface with minimal aesthetic
-📱 Responsive design that adapts to all screen sizes
-🎨 Custom CSS styling for smooth visuals and layout
-⚙️ Modular structure (easy to expand and maintain)
-💡 Ready for future integration (API, backend, or JS logic)\
+🌟 Features <br>
+🛍️ Modern shopping interface with minimal aesthetic <br>
+📱 Responsive design that adapts to all screen sizes <br>
+🎨 Custom CSS styling for smooth visuals and layout <br>
+⚙️ Modular structure (easy to expand and maintain) <br>
+💡 Ready for future integration (API, backend, or JS logic)
 
-🧰 Tech Stack
-Category	            Technology
-Frontend	            HTML5, CSS3
-Optional Extensions  	JavaScript (for future features)
-Tools	                Git, VS Code, Browser DevTools
+🧰 Tech Stack <br>
+Category	            Technology <br>
+Frontend	            HTML5, CSS3 <br>
+Optional Extensions  	JavaScript (for future features) <br> 
+Tools	                Git, VS Code, Browser DevTools 
 
-🚀 Getting Started
-Clone the Repository
+🚀 Getting Started <br>
+Clone the Repository <br>
 
-git clone https://github.com/saikrishnagrandhi13/Threads_shopping.git
+git clone https://github.com/saikrishnagrandhi13/Threads_shopping.git <br>
 cd Threads_shopping
 
 Run Locally
