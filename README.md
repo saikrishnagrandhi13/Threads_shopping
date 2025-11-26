@@ -41,6 +41,17 @@ Threads_shopping/
 ├── index.html          # Main homepage <br>
 ├── about.html          # About page <br>
 ├── contact.html        # Contact page <br>
+├── men.html            # Menswear Page <br>
+├── women.html          # Womenswear Page <br>
+└──  components/        <br>
+├── header.js           # Header Page (Universal) <br>
+├── footer.js           # Footer Page (Universal) <br>
+├── contact.js          # Contact Page JS <br>
+├── men.js              # Menswear Page JS <br>
+├── women.js            # Womenswear Page JS <br>
+└── js/                 <br>
+├── app.js              # Main JS file for the whole application <br>
+├── chatbot.js          # Chatbot JS file <br>
 ├── styles.css          # Global CSS styles <br>
 ├── images/             # Image assets <br>
 └── README.md           # This file <br>
