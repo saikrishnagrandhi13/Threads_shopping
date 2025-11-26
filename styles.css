@@ -1382,6 +1382,10 @@ nav ul li a {
     background: white;
     z-index: 90;
     transition: box-shadow 0.25s ease;
+
+    @media screen and (max-width: 768px) {
+        top: 60px; 
+    }
 }
 
 .men-topbar.scrolled {
