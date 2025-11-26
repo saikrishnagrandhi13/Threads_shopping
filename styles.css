@@ -99,41 +99,62 @@ main {
 
 .banner-slides {
     display: flex;
-    width: 300%;
+    width: 100%;
     height: 100%;
-    animation: bannerSlide 5s infinite;
+    transition: transform 0.8s ease-in-out !important;
+    animation: none !important;
 }
 
 .banner-slide {
-    width: 33.333%;
+    min-width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    display: flex;               
+    justify-content: center;      
+    align-items: center;         
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    transition: transform 0.8s ease-in-out !important;
+}
+
+.banner-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e9e3e33f;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 20;
     color: white;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease;
+}
+
+.banner-arrow:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: #000;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.banner-content {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
     text-align: center;
-}
-
-.banner-slide:nth-child(1) {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url('images/new_arrival.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.banner-slide:nth-child(2) {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url('images/summer_essentials.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.banner-slide:nth-child(3) {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url('images/timeless_styles.jpg');
-    background-size: cover;
-    background-position: center;
+    max-width: 70%;
+    margin: 0 auto;
+    color: white;
 }
 
 .banner-content h2 {
@@ -1130,4 +1151,388 @@ nav ul li a {
         grid-template-rows: auto 1fr auto;
         min-height: 100vh;
     }
+}
+
+/* Email Suggestion Dropdown */
+.email-suggestions {
+    position: relative;
+    width: 100%;
+}
+
+.email-suggestions div {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.email-suggestions div:hover {
+    background: #f2f2f2;
+}
+
+/* Modal Background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.3s ease;
+}
+
+/* Modal Box */
+.modal-box {
+    background: white;
+    width: 90%;
+    max-width: 420px;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    animation: slideUp 0.35s ease;
+}
+
+.modal-box button {
+    padding: 10px 25px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+.modal-box button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ================
+   THREADS CHATBOT
+================ */
+
+   #threads-chatbot-root {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Chat bubble */
+#chatbot-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#chatbot-btn.hidden {
+    display: none;
+}
+
+/* Chat window */
+#chatbot-box {
+    width: 320px;
+    height: 420px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+}
+
+#chatbot-box.open {
+    display: flex;
+}
+
+/* Header */
+#chatbot-header {
+    background: black;
+    color: white;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-title {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.chatbot-subtitle {
+    font-size: 0.75rem;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Messages */
+#chatbot-messages {
+    flex: 1;
+    padding: 12px;
+    background: #f4f4f4;
+    overflow-y: auto;
+}
+
+.msg {
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    max-width: 85%;
+    margin-bottom: 10px;
+}
+
+.msg.bot {
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.msg.user {
+    background: black;
+    color: white;
+    margin-left: auto;
+}
+
+/* Quick buttons */
+#chatbot-quick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 8px;
+    background: #fff;
+}
+
+#chatbot-quick button {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: #fff;
+}
+
+#chatbot-quick button:hover {
+    background: black;
+    color: white;
+}
+
+/* Input */
+#chatbot-input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#chatbot-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+
+#chatbot-send {
+    background: black;
+    color: white;
+    border: none;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+#chatbot-close {
+    background-color: #ffffff !important;
+    width: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.men-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    position: sticky;
+    top: 70px;
+    background: white;
+    z-index: 90;
+    transition: box-shadow 0.25s ease;
+}
+
+.men-topbar.scrolled {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.men-filter button,
+.men-sort select {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    height: 35px;
+}
+
+/* FILTER PANEL */
+.filter-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.filter-panel.hidden {
+    display: none;
+}
+
+.filter-category li {
+    list-style: none;
+    padding: 6px 0;
+    cursor: pointer;
+}
+
+.filter-category li.active {
+    font-weight: bold;
+}
+
+.close-filter-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 8px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* PRODUCT GRID */
+.men-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.men-card {
+    text-align: left;
+    font-style: italic;
+
+    h3 {
+        font-family:'Courier New', Courier, monospace;
+        
+        
+    }
+}
+
+.img-wrap {
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SOLD OUT OVERLAY */
+.sold-overlay {
+    position: absolute;
+    background: rgba(255,255,255,0.8);
+    color: #666;
+    padding: 10px 20px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+/* CARD OUT OF STOCK */
+.men-card.sold-out .img-wrap {
+    position: relative;
+}
+.men-card.sold-out .img-wrap img {
+    opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+    .men-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .men-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* FILTER OVERLAY (dark background) */
+.filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.filter-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* FILTER PANEL SLIDE-IN */
+#filterPanel {
+    position: fixed;
+    top: 0;
+    left: -320px;       /* starts hidden */
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+}
+
+#filterPanel.open {
+    left: 0;
 }
